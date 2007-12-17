@@ -14,7 +14,6 @@ Patch: ladspa-1.12-gcc41.patch.bz2
 License: LGPL
 Group: Sound
 URL: http://www.ladspa.org
-BuildRoot: %{_tmppath}/%{name}-buildroot
 #for mkdirhier
 BuildRequires: imake
 
