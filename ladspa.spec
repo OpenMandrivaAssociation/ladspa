@@ -19,7 +19,6 @@ BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: imake
 
 %description
-
 There is a large number of synthesis packages in use or development on
 the Linux platform at this time. The Linux Audio Developer's Simple
 Plugin API (LADSPA) attempts to give programmers the ability to write
@@ -33,7 +32,6 @@ Summary:Linux Audio Developer's Simple Plugin API
 Group: Development/C
 Requires: %name = %version
 %description devel
-
 There is a large number of synthesis packages in use or development on
 the Linux platform at this time. The Linux Audio Developer's Simple
 Plugin API (LADSPA) attempts to give programmers the ability to write
