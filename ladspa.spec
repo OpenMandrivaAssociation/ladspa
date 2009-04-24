@@ -1,17 +1,16 @@
 %define name ladspa
 %define oname ladspa_sdk
-%define version 1.12
-%define release %mkrel 14
+%define version 1.13
+%define release %mkrel 1
 
 Summary: LADSPA SDK example plugins
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://www.ladspa.org/download/%{oname}_%version.tar.bz2
+Source0: http://www.ladspa.org/download/%{oname}_%version.tgz
 Source1: ladspa.sh.bz2
 Source2: ladspa.csh.bz2
-Patch: ladspa-1.12-gcc41.patch.bz2
-License: LGPL
+License: LGPLv2+
 Group: Sound
 URL: http://www.ladspa.org
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -44,7 +43,6 @@ header file.
 
 %prep
 %setup -q -n %oname
-%patch -p1
 cd doc
 #fix links to the header file in the docs
 perl -pi -e "s!HREF=\"ladspa.h.txt\"!href=\"file:///usr/include/ladspa.h\"!" *.html
