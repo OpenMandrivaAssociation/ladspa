@@ -1,7 +1,7 @@
 %define name ladspa
 %define oname ladspa_sdk
 %define version 1.13
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: LADSPA SDK example plugins
 Name: %{name}
