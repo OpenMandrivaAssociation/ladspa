@@ -53,7 +53,7 @@ cd src
 %make targets
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 cd src
 %makeinstall INSTALL_PLUGINS_DIR=%buildroot%_libdir/ladspa INSTALL_INCLUDE_DIR=%buildroot%_includedir INSTALL_BINARY_DIR=%buildroot%_bindir
 install -d -m 755 %buildroot%_sysconfdir/profile.d
@@ -63,7 +63,7 @@ bzcat %SOURCE2 > %buildroot%_sysconfdir/profile.d/ladspa.csh
 perl -pi -e "s!/usr/lib!%_libdir!" %buildroot%_sysconfdir/profile.d/ladspa*sh
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
