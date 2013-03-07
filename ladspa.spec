@@ -1,3 +1,5 @@
+%define debug_package          %{nil}
+
 %define name ladspa
 %define oname ladspa_sdk
 %define version 1.13
