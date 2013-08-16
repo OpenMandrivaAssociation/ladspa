@@ -23,6 +23,13 @@ against a range of host applications.
 
 This package contains the example plugins from the LADSPA SDK.
 
+%files
+%doc doc/COPYING
+%attr(644,root,root) %{_sysconfdir}/profile.d/ladspa*sh
+%{_bindir}/*
+%{_libdir}/ladspa
+
+
 %package devel
 Summary:	Linux Audio Developer's Simple Plugin API
 Group:		Development/C
@@ -38,6 +45,10 @@ against a range of host applications.
 Definitive technical documentation on LADSPA plugins for both the host
 and plugin is contained within copious comments within the ladspa.h
 header file.
+
+%files devel
+%doc doc/*.html doc/COPYING
+%{_includedir}/ladspa.h
 
 %prep
 %setup -qn %{oname}
@@ -60,14 +71,3 @@ install -m 644 %SOURCE1 %{buildroot}%{_sysconfdir}/profile.d/ladspa.sh
 install -m 644 %SOURCE2 %{buildroot}%{_sysconfdir}/profile.d/ladspa.csh
 #gw replace lib by lib64 if needed
 sed -i -e "s!/usr/lib!%{_libdir!" %{buildroot}%{_sysconfdir}/profile.d/ladspa*sh
-
-%files
-%doc doc/COPYING
-%attr(644,root,root) %{_sysconfdir}/profile.d/ladspa*sh
-%{_bindir}/*
-%{_libdir}/ladspa
-
-%files devel
-%doc doc/*.html doc/COPYING
-%{_includedir}/ladspa.h
-
