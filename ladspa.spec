@@ -4,7 +4,7 @@
 Summary:	LADSPA SDK example plugins
 Name:		ladspa
 Version:	1.13
-Release:	6
+Release:	7
 License:	LGPLv2+
 Group:		Sound
 Url:		http://www.ladspa.org
