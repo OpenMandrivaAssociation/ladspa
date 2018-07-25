@@ -70,4 +70,4 @@ install -d -m 755 %{buildroot}%{_sysconfdir}/profile.d
 install -m 644 %SOURCE1 %{buildroot}%{_sysconfdir}/profile.d/ladspa.sh
 install -m 644 %SOURCE2 %{buildroot}%{_sysconfdir}/profile.d/ladspa.csh
 #gw replace lib by lib64 if needed
-sed -i -e "s!/usr/lib!%{_libdir!" %{buildroot}%{_sysconfdir}/profile.d/ladspa*sh
+sed -i -e "s!/usr/lib!%{_libdir}!" %{buildroot}%{_sysconfdir}/profile.d/ladspa*sh
