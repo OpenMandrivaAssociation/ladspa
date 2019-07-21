@@ -3,8 +3,8 @@
 
 Summary:	LADSPA SDK example plugins
 Name:		ladspa
-Version:	1.13
-Release:	15
+Version:	1.15
+Release:	1
 License:	LGPLv2+
 Group:		Sound
 Url:		http://www.ladspa.org
@@ -51,7 +51,7 @@ header file.
 %{_includedir}/ladspa.h
 
 %prep
-%setup -qn %{oname}
+%setup -qn %{oname}_%{version}
 cd doc
 #fix links to the header file in the docs
 sed -i -e "s!HREF=\"ladspa.h.txt\"!href=\"file:///usr/include/ladspa.h\"!" *.html
