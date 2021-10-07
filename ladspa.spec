@@ -1,10 +1,9 @@
-%define debug_package	%{nil}
 %define oname ladspa_sdk
 
 Summary:	LADSPA SDK example plugins
 Name:		ladspa
 Version:	1.15
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		Sound
 Url:		http://www.ladspa.org
@@ -62,7 +61,7 @@ cd src
 
 %install
 cd src
-%makeinstall \
+%make_install \
 	INSTALL_PLUGINS_DIR=%{buildroot}%{_libdir}/ladspa \
 	INSTALL_INCLUDE_DIR=%{buildroot}%{_includedir} \
 	INSTALL_BINARY_DIR=%{buildroot}%{_bindir}
