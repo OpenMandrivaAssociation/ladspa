@@ -15,6 +15,7 @@ Source1:	ladspa.sh
 Source2:	ladspa.csh
 #for mkdirhier
 BuildRequires:	imake
+BuildRequires:	pkgconfig(sndfile)
 
 %description
 There is a large number of synthesis packages in use or development on
