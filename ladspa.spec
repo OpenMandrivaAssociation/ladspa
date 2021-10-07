@@ -1,9 +1,12 @@
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
 %define oname ladspa_sdk
 
 Summary:	LADSPA SDK example plugins
 Name:		ladspa
-Version:	1.15
-Release:	2
+Version:	1.17
+Release:	1
 License:	LGPLv2+
 Group:		Sound
 Url:		http://www.ladspa.org
