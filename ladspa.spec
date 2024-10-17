@@ -9,7 +9,7 @@ Version:	1.17
 Release:	2
 License:	LGPLv2+
 Group:		Sound
-Url:		http://www.ladspa.org
+Url:		https://www.ladspa.org
 Source0:	http://www.ladspa.org/download/%{oname}_%{version}.tgz
 Source1:	ladspa.sh
 Source2:	ladspa.csh
